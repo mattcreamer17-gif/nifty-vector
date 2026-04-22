@@ -1,0 +1,255 @@
+/* Nifty Vector tokens */
+:root {
+  --coral: #F26B5E;
+  --ink: #171615;
+  --ink-heading: #111111;
+  --paper: #FFFFFF;
+  --soft: #F2F3F3;
+  --rule: #E3E3E3;
+  --muted: #6B6A68;
+
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --serif: 'Playfair Display', 'Merriweather', Georgia, serif;
+
+  --max: 780px;
+  --gutter: 24px;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.8;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--coral); text-decoration-thickness: 1px; }
+a:hover { color: var(--coral); }
+
+/* Masthead */
+.masthead {
+  padding: 40px 0 28px;
+  border-bottom: 1px solid var(--rule);
+  background: var(--paper);
+}
+.masthead .wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.logo-block { display: flex; align-items: center; }
+.logo { height: 52px; width: auto; display: block; }
+.eyebrow { display: flex; align-items: center; gap: 12px; }
+.eyebrow .rule { display: inline-block; width: 32px; height: 1px; background: var(--ink); }
+.eyebrow-text {
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink);
+  font-weight: 500;
+}
+
+/* Hero */
+.hero {
+  padding: 88px 0 56px;
+  position: relative;
+}
+.hero .wrap { max-width: 860px; }
+.hero-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--coral);
+  margin-bottom: 28px;
+}
+.target-mark { display: inline-flex; }
+.meta-label {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--ink);
+}
+h1 {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 1.1;
+  letter-spacing: 0.005em;
+  color: var(--ink-heading);
+  margin: 0 0 28px;
+}
+h1::first-line { color: var(--ink-heading); }
+.deck {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-style: italic;
+  font-size: 22px;
+  line-height: 1.5;
+  color: var(--ink);
+  max-width: 640px;
+  margin: 0;
+}
+
+/* Body */
+.body { padding: 48px 0 72px; }
+.copy p { margin: 0 0 28px; }
+.copy p.dropcap::first-letter {
+  font-family: var(--serif);
+  font-weight: 700;
+  float: left;
+  font-size: 68px;
+  line-height: 0.9;
+  padding: 6px 12px 0 0;
+  color: var(--coral);
+}
+.copy .aside {
+  font-size: 15px;
+  color: var(--muted);
+  border-left: 2px solid var(--coral);
+  padding: 4px 0 4px 18px;
+  line-height: 1.65;
+}
+
+.divider {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(to right, var(--coral) 0, var(--coral) 36px, var(--rule) 36px, var(--rule) 100%);
+  margin: 48px 0 40px;
+}
+
+.kicker {
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--coral);
+  margin: 0 0 10px;
+}
+
+/* CTA */
+.cta { padding: 24px 0 88px; }
+.cta-card {
+  background: var(--soft);
+  border: 1px solid var(--rule);
+  padding: 48px 40px;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+.cta-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 56px;
+  height: 3px;
+  background: var(--coral);
+}
+.cta-eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--coral);
+  margin-bottom: 14px;
+}
+.cta-head {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 1.15;
+  color: var(--ink-heading);
+  margin: 0 0 16px;
+}
+.cta-sub {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--ink);
+  margin: 0 0 28px;
+  max-width: 560px;
+}
+.cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--ink-heading);
+  color: var(--paper);
+  text-decoration: none;
+  padding: 16px 22px;
+  font-family: var(--sans);
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  border-radius: 2px;
+  min-height: 48px;
+  transition: background 180ms ease, transform 180ms ease;
+}
+.cta-link:hover { background: var(--coral); color: var(--paper); transform: translateY(-1px); }
+.cta-link:focus-visible { outline: 2px solid var(--coral); outline-offset: 3px; }
+.cta-arrow { display: inline-flex; }
+.cta-url {
+  margin-top: 14px;
+  font-size: 13px;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid var(--rule);
+  padding: 28px 0 48px;
+  background: var(--paper);
+}
+.footer-wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.footer-line { font-size: 13px; color: var(--ink); font-weight: 500; }
+.footer-line a { color: var(--coral); text-decoration: none; }
+.footer-line a:hover { text-decoration: underline; }
+.footer-mini { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+
+/* Mobile */
+@media (max-width: 640px) {
+  body { font-size: 16px; }
+  .masthead { padding: 24px 0 20px; }
+  .masthead .wrap { flex-direction: column; align-items: flex-start; gap: 14px; }
+  .logo { height: 42px; }
+  .eyebrow-text { font-size: 10px; }
+
+  .hero { padding: 48px 0 32px; }
+  h1 { font-size: 34px; line-height: 1.12; }
+  .deck { font-size: 18px; }
+
+  .body { padding: 32px 0 48px; }
+  .copy p.dropcap::first-letter { font-size: 54px; padding: 4px 10px 0 0; }
+  .divider { margin: 36px 0 28px; }
+
+  .cta { padding: 8px 0 56px; }
+  .cta-card { padding: 32px 22px; }
+  .cta-head { font-size: 26px; }
+  .cta-sub { font-size: 15px; }
+  .cta-link { width: 100%; justify-content: space-between; }
+
+  footer { padding: 20px 0 36px; }
+  .footer-wrap { flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 375px) {
+  :root { --gutter: 18px; }
+  h1 { font-size: 30px; }
+  .cta-head { font-size: 24px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}

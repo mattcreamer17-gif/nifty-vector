@@ -1,0 +1,3 @@
+A single-page, prospect-facing landing page built for Nifty Vector (booth SS43, eMerge Americas 2026). The page uses Nifty Vector's own typographic logic (Playfair Display serif display to echo the coral wordmark, Inter body to match their live site) and their coral primary (#F26B5E) on near-white, with no stock dark hero. Copy is the fit-analysis pitch body reflowed as an editorial read for the two founders (Matt MacDonald, Joseph Howse), anchored by the Feeld precedent and the ICM methodology link, and ending in a Calendly CTA for Matt Creamer (Eduba CRO). Eduba branding is confined to the footer.
+
+Intended URL path: /for/nifty-vector
